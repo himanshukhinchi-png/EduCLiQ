@@ -1,1 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>My Website</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+    }
+
+    /* NAVBAR */
+
+    nav {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 30px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      opacity: 0.7;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: calc(100vh - 80px);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(50px, 8vw, 110px);
+      line-height: 0.95;
+      max-width: 1100px;
+      letter-spacing: -4px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin-top: 30px;
+
+      font-size: 18px;
+      line-height: 1.6;
+
+      color: #999999;
+    }
+
+    .button {
+      margin-top: 35px;
+
+      padding: 16px 30px;
+
+      border-radius: 100px;
+      border: none;
+
+      background: #ffffff;
+      color: #000000;
+
+      font-size: 15px;
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition: transform 0.3s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.06);
+    }
+
+    /* SECTION */
+
+    .section {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 100px 30px;
+    }
+
+    .section-content {
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .section h2 {
+      font-size: clamp(40px, 6vw, 80px);
+      margin-bottom: 30px;
+    }
+
+    .section p {
+      max-width: 650px;
+
+      color: #999999;
+
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav {
+        height: 70px;
+        padding: 0 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">
+      BRAND.
+    </div>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <h1>
+      We Build Digital Experiences.
+    </h1>
+
+    <p>
+      A premium digital studio creating beautiful,
+      high-performance experiences for modern brands.
+    </p>
+
+    <button class="button" id="exploreButton">
+      Explore Our Work →
+    </button>
+
+  </section>
+
+
+  <!-- WORK -->
+
+  <section class="section" id="work">
+
+    <div class="section-content">
+
+      <h2>Selected Work</h2>
+
+      <p>
+        We combine strategy, design and technology
+        to create digital experiences people remember.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="section" id="about">
+
+    <div class="section-content">
+
+      <h2>About Us</h2>
+
+      <p>
+        We believe great digital products should feel
+        simple, fast and effortless.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="section" id="contact">
+
+    <div class="section-content">
+
+      <h2>Let's Work Together.</h2>
+
+      <p>
+        Have an idea? Let's turn it into something
+        exceptional.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    const exploreButton =
+      document.getElementById("exploreButton");
+
+    exploreButton.addEventListener("click", function () {
+
+      document
+        .getElementById("work")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+    });
+
+  </script>
+
+</body>
+</html>
